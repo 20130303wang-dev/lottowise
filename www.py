@@ -216,4 +216,8 @@ def generate_terminal():
     print("✅ 终端构建完成：index.html 已包含真实期号和日期。")
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     generate_terminal()
+=======
+    generate_terminal()
+>>>>>>> 66f794907e961530b8c6cf5462bb763b2486640b
