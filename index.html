@@ -1,0 +1,352 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>LottoWise Pro</title>
+        <style>
+            :root { --green: #25d970; --blue: #00b9ff; --dark: #163300; --bg: #f8fafc; }
+            body { font-family: -apple-system, sans-serif; background: var(--bg); margin: 0; padding-bottom: 80px; }
+            .nav { background: var(--dark); color: white; padding: 20px 15px; position: sticky; top: 0; z-index: 100; }
+            .tabs { display: flex; background: white; border-bottom: 1px solid #e2e8f0; }
+            .tab { flex: 1; text-align: center; padding: 15px; font-size: 12px; font-weight: 800; color: #94a3b8; }
+            .tab.active { color: var(--dark); border-bottom: 3px solid var(--green); }
+            .container { padding: 15px; }
+            .card { background: white; border-radius: 16px; padding: 15px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+            .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+            .grid-item { aspect-ratio: 1; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; }
+            .grid-item small { font-size: 8px; font-weight: 400; opacity: 0.8; }
+            .row { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
+            .ball { width: 34px; height: 34px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-right: 12px; }
+            .data { flex-grow: 1; }
+            .label { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px; }
+            .bar-bg { height: 6px; background: #f1f5f9; border-radius: 3px; overflow: hidden; }
+            .bar-fill { height: 100%; background: var(--blue); }
+            .btn-pay { display: block; background: var(--green); color: var(--dark); text-align: center; padding: 15px; border-radius: 12px; font-weight: 800; text-decoration: none; margin-top: 20px; }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <div style="font-size:10px; color:var(--green); font-weight:800;">● SYSTEM ACTIVE</div>
+            <h2 style="margin:0;">LottoWise <span style="color:var(--green)">Pro</span></h2>
+        </div>
+        <div class="tabs">
+            <div id="t1" class="tab active" onclick="sw('r')">RED HEAT</div>
+            <div id="t2" class="tab" onclick="sw('b')">BLUE COLD</div>
+            <div id="t3" class="tab" onclick="sw('p')">PREMIUM</div>
+        </div>
+        <div class="container" id="rc"><div class="card"><div class="grid">
+        <div class="grid-item" style="background:rgba(37,217,112,0.21052631578947367); color:#163300">
+            01 <small>4x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3684210526315789); color:#163300">
+            02 <small>7x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.5789473684210527); color:#fff">
+            03 <small>11x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            04 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.47368421052631576); color:#163300">
+            05 <small>9x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.2631578947368421); color:#163300">
+            06 <small>5x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            07 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.7368421052631579); color:#fff">
+            08 <small>14x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.21052631578947367); color:#163300">
+            09 <small>4x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.2631578947368421); color:#163300">
+            10 <small>5x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            11 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.2631578947368421); color:#163300">
+            12 <small>5x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.2631578947368421); color:#163300">
+            13 <small>5x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3684210526315789); color:#163300">
+            14 <small>7x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            15 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.5263157894736842); color:#fff">
+            16 <small>10x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.15789473684210525); color:#163300">
+            17 <small>3x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.5263157894736842); color:#fff">
+            18 <small>10x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            19 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.15789473684210525); color:#163300">
+            20 <small>3x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3684210526315789); color:#163300">
+            21 <small>7x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.2631578947368421); color:#163300">
+            22 <small>5x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3157894736842105); color:#163300">
+            23 <small>6x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3684210526315789); color:#163300">
+            24 <small>7x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3157894736842105); color:#163300">
+            25 <small>6x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3157894736842105); color:#163300">
+            26 <small>6x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.47368421052631576); color:#163300">
+            27 <small>9x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,1.0); color:#fff">
+            28 <small>19x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.47368421052631576); color:#163300">
+            29 <small>9x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.21052631578947367); color:#163300">
+            30 <small>4x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.47368421052631576); color:#163300">
+            31 <small>9x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.5263157894736842); color:#fff">
+            32 <small>10x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            33 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            34 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.47368421052631576); color:#163300">
+            35 <small>9x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.21052631578947367); color:#163300">
+            36 <small>4x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3157894736842105); color:#163300">
+            37 <small>6x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.15789473684210525); color:#163300">
+            38 <small>3x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.2631578947368421); color:#163300">
+            39 <small>5x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.47368421052631576); color:#163300">
+            40 <small>9x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.15789473684210525); color:#163300">
+            41 <small>3x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.2631578947368421); color:#163300">
+            42 <small>5x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.47368421052631576); color:#163300">
+            43 <small>9x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            44 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.2631578947368421); color:#163300">
+            45 <small>5x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.2631578947368421); color:#163300">
+            46 <small>5x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.2631578947368421); color:#163300">
+            47 <small>5x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.2631578947368421); color:#163300">
+            48 <small>5x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3684210526315789); color:#163300">
+            49 <small>7x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3684210526315789); color:#163300">
+            50 <small>7x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.5789473684210527); color:#fff">
+            51 <small>11x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            52 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.631578947368421); color:#fff">
+            53 <small>12x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3157894736842105); color:#163300">
+            54 <small>6x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.21052631578947367); color:#163300">
+            55 <small>4x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.15789473684210525); color:#163300">
+            56 <small>3x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3157894736842105); color:#163300">
+            57 <small>6x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            58 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3684210526315789); color:#163300">
+            59 <small>7x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            60 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.5263157894736842); color:#fff">
+            61 <small>10x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.5789473684210527); color:#fff">
+            62 <small>11x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            63 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.5263157894736842); color:#fff">
+            64 <small>10x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            65 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.42105263157894735); color:#163300">
+            66 <small>8x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3684210526315789); color:#163300">
+            67 <small>7x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.3157894736842105); color:#163300">
+            68 <small>6x</small>
+        </div>
+        <div class="grid-item" style="background:rgba(37,217,112,0.47368421052631576); color:#163300">
+            69 <small>9x</small>
+        </div></div></div></div>
+        <div class="container" id="bc" style="display:none;"><div class="card">
+        <div class="row">
+            <div class="ball">13</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>99</b></span><span>Hit: 0x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ball">06</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>94</b></span><span>Hit: 1x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ball">24</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>88</b></span><span>Hit: 2x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ball">08</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>81</b></span><span>Hit: 2x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ball">25</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>69</b></span><span>Hit: 3x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ball">09</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>64</b></span><span>Hit: 2x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ball">10</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>47</b></span><span>Hit: 2x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ball">03</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>30</b></span><span>Hit: 3x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ball">22</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>24</b></span><span>Hit: 6x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ball">16</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>23</b></span><span>Hit: 2x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ball">20</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>20</b></span><span>Hit: 5x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ball">07</div>
+            <div class="data">
+                <div class="label"><span>Omission: <b>19</b></span><span>Hit: 2x</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width:95%"></div></div>
+            </div>
+        </div></div></div>
+        <div class="container" id="pc" style="display:none;">
+            <div class="card" style="text-align:center; padding: 40px 20px;">
+                <h3 style="margin:0;">Unlock AI Predictions</h3>
+                <p style="font-size:13px; color:#64748b;">Get the most probable 3-ball combo based on neural analysis.</p>
+                <a href="#" class="btn-pay">Subscribe for $9.90/mo</a>
+            </div>
+        </div>
+        <script>
+            function sw(t){
+                document.getElementById('rc').style.display = t=='r'?'block':'none';
+                document.getElementById('bc').style.display = t=='b'?'block':'none';
+                document.getElementById('pc').style.display = t=='p'?'block':'none';
+                document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+                if(t=='r')document.getElementById('t1').classList.add('active');
+                if(t=='b')document.getElementById('t2').classList.add('active');
+                if(t=='p')document.getElementById('t3').classList.add('active');
+            }
+        </script>
+    </body>
+    </html>
+    
